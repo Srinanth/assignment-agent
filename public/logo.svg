@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Assignment Agent logo">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset in="SourceAlpha" dx="0" dy="8" result="off"/>
+      <feGaussianBlur in="off" stdDeviation="16" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0
+                                                     0 0 0 0 0
+                                                     0 0 0 0 0
+                                                     0 0 0 0.15" result="shadow"/>
+      <feBlend in="SourceGraphic" in2="shadow" mode="normal"/>
+    </filter>
+  </defs>
+
+  <!-- soft shadow behind whole emblem -->
+  <g filter="url(#f1)">
+    <!-- outer orbital ring -->
+    <g transform="translate(256,256)">
+      <path d="M-160,-20 A200,120 0 1,1 160,20" fill="none" stroke="url(#g1)" stroke-opacity="0.12" stroke-width="18" stroke-linecap="round" />
+      <path d="M-120,60 A160,95 0 1,0 120,-60" fill="none" stroke="url(#g1)" stroke-opacity="0.09" stroke-width="10" stroke-linecap="round" />
+    </g>
+
+    <!-- main paper badge shape (rounded rectangle with folded corner) -->
+    <g transform="translate(96,88)">
+      <path d="M320 40 H88 a24 24 0 0 0 -24 24 v264 a24 24 0 0 0 24 24 h232 a24 24 0 0 0 24 -24 V104 L320 40 z"
+            fill="url(#g1)"/>
+      <!-- folded corner highlight -->
+      <path d="M320 40 v72 h72" transform="translate(-72,0)" fill="none" stroke="url(#g2)" stroke-width="10" stroke-linejoin="round" opacity="0.22" />
+      <path d="M320 40 v72 h72" transform="translate(-72,0)" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linejoin="round" opacity="0.12" />
+      
+      <!-- inner white paper area -->
+      <path d="M296 64 H104 a12 12 0 0 0 -12 12 v232 a12 12 0 0 0 12 12 h192 a12 12 0 0 0 12 -12 V116 L296 64 z"
+            fill="#ffffff" opacity="0.98"/>
+
+      <!-- subtle lines to suggest text -->
+      <g transform="translate(128,116)" opacity="0.14" fill="#111827">
+        <rect x="0" y="0" width="128" height="8" rx="4"/>
+        <rect x="0" y="22" width="176" height="8" rx="4"/>
+        <rect x="0" y="44" width="96" height="8" rx="4"/>
+      </g>
+
+      <!-- checkmark badge (agent stamp) -->
+      <g transform="translate(232,240)">
+        <circle cx="0" cy="0" r="48" fill="#0ea5a4" />
+        <path d="M-18 0 L-6 12 L18 -14" fill="none" stroke="#052e2e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+
+      <!-- tiny agent "eye" dot to hint 'agent' persona -->
+      <circle cx="256" cy="88" r="6" fill="#fde68a" opacity="0.95"/>
+    </g>
+  </g>
+
+  <!-- crisp outline for small sizes -->
+  <path d="M184 128 h144 a8 8 0 0 1 8 8 v96" fill="none" stroke="#000000" stroke-opacity="0.03" stroke-width="1" />
+
+</svg>
