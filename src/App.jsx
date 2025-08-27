@@ -43,11 +43,11 @@ export default function AssignmentUpload() {
       } else {
         const errorData = await response.json();
         setStatusMessage(
-          errorData.detail || "Upload failed. Please tell me if this happens."
+        "Upload failed. Please tell me if this happens."
         );
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error:tell me");
       setStatusMessage("Something went wrong. Please tell me.");
     } finally {
       setLoading(false);
