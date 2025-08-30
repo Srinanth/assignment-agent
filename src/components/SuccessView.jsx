@@ -18,7 +18,7 @@ const SuccessView = ({ onNewSubmission }) => (
     </h3>
     <p className="text-gray-600 mt-2 max-w-sm mx-auto">
       Your assignment has been received and is being evaluated by our AI agent.
-      You’ll get detailed feedback and grading in your email shortly.
+      You’ll get the detailed answers and explanations in your email shortly.
     </p>
     <button
       onClick={onNewSubmission}
