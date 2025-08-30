@@ -1,9 +1,6 @@
 import { useState, useCallback } from 'react';
 import { API_URL } from '../utils/constants';
 
-/**
- * Custom hook to manage the file upload logic, state, and API interaction.
- */
 export const useFileUpload = () => {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
