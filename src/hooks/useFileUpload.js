@@ -32,7 +32,7 @@ export const useFileUpload = () => {
         setSubmitted(true);
         setStatusMessage('');
       } else {
-        let errorMessage = 'Upload failed. Please try again.';
+        let errorMessage = 'The Server is currently offline, Please try again later.';
         try {
           const errorData = await response.json();
           if (errorData?.message) {
